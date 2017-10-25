@@ -18,7 +18,7 @@ module ctrlunit(input [3:0] op, input ZERO,
 	parameter JMPB = 4'b1111;
 	
 	assign JUMP = (op == JMP)? 1 : 0;
-	assign BRANCH = (((op == BEQ)&&(ZERO == 1'b1)) || ((op == BNE)&&(ZERO == 1'b0)) || ((op == JMPB)&&(ZERO == 1'b0)))? 1 : 0;
+	assign BRANCH = (((op == BEQ)&&(ZERO == 1'b1)) || ((op == BNE)&&(ZERO == 1'b0)) || ((op == JMPB)&&(ZERO == 1'b1)))? 1 : 0;
 	assign ALUC = (op == SLT || op == JMPB)? 3'b011 : ((op == ADD || op == ADDI || op == LW || op == SW)? 3'b101 : ((op == OR || op == ORI)? 3'b110 : ((op == SUB || op == BNE || op == BEQ)? 3'b001 : ((op == AND || op == ANDI)? 3'b000 : ((op == SUBC)? 3'b010 : ((op == ADDC)? 3'b100 : 3'b111)) ) ) ) );
 	assign ALUSRCB = (op == ADDI || op == ANDI || op == ORI || op == SW || op == LW )? 1 : 0;
 	assign WRITEMEM = (op == SW)? 1 : 0;

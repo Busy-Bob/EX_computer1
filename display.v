@@ -1,7 +1,6 @@
 //choice的分别从高到低对应高位数码管->低位数码管
 //off 一般为0，为1时候不显示按键。
-// IN_off_number: 
-module display(input IN_clk, input [15:0] IN_value, input [2:0] IN_off_number, 
+module display(input IN_clk, input [15:0] IN_value, 
 					output reg [3:0] OUT_choice, output reg [7:0] OUT_seg);
 	reg		[1:0]state;
 	reg		[31:0]temp_seg;
@@ -11,7 +10,7 @@ module display(input IN_clk, input [15:0] IN_value, input [2:0] IN_off_number,
 	begin
 		state = 0;
 	end
-	always @(IN_value or IN_off_number)
+	always @(IN_value)
 	begin
 		case(IN_value[3:0])
 			4'b0000: 
@@ -277,13 +276,17 @@ module display(input IN_clk, input [15:0] IN_value, input [2:0] IN_off_number,
 					temp_seg[31:24] = DF;				
 				end				
 		endcase
-		case(IN_off_number)
-		3'b000: 	temp_seg = temp_seg;
-		3'b001:	temp_seg = {DNULL,temp_seg[23:0]};
-		3'b010:	temp_seg = {DNULL,DNULL,temp_seg[15:0]};
-		3'b011:	temp_seg = {DNULL,DNULL,DNULL,temp_seg[7:0]};
-		default: temp_seg = {DNULL,DNULL,DNULL,DNULL};
-		endcase
+		
+			if(IN_value[15:12] != 4'b0)
+				temp_seg = temp_seg;
+			else if(IN_value[11:8] != 4'b0)
+				temp_seg = {DNULL,temp_seg[23:0]};
+			else if(IN_value[7:4] != 4'b0)
+				temp_seg = {DNULL,DNULL,temp_seg[15:0]};
+			else //if(IN_value[3:0] != 4'b0)
+				temp_seg = {DNULL,DNULL,DNULL,temp_seg[7:0]};
+		//	else 
+		//		temp_seg = {DNULL,DNULL,DNULL,DNULL};
 	end
 	
 	always @ (state or temp_seg) begin

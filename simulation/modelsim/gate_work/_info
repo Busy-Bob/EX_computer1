@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\altera\13.0\EX_computer1\simulation\modelsim
+vinstrconunit_vlg_tst
+!i10b 1
+!s100 oOJN`EQj6K_dA7V^Hbb::1
+IE2bI]2[[CJFcfOT:LMXcB0
+VN[D3<k5l1RDL78Cb:P4OR0
+Z1 dD:\altera\13.0\EX_computer1\simulation\modelsim
+w1508414290
+8D:/altera/13.0/EX_computer1/simulation/modelsim/instrconunit.vt
+FD:/altera/13.0/EX_computer1/simulation/modelsim/instrconunit.vt
+L0 3
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1508899495.830000
+!s107 D:/altera/13.0/EX_computer1/simulation/modelsim/instrconunit.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/altera/13.0/EX_computer1/simulation/modelsim|D:/altera/13.0/EX_computer1/simulation/modelsim/instrconunit.vt|
+!s101 -O0
+Z3 o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+D:/altera/13.0/EX_computer1/simulation/modelsim -O0
+vtest_computer
+IH_IiH^Q;2FXg:=K?3@K=@0
+VWmY]^]J1h?VAabWJT@iB[3
+R1
+w1508898891
+8EX_computer1.vo
+FEX_computer1.vo
+L0 31
+R2
+r1
+31
+R3
+!i10b 1
+!s100 Q3Y2;i0VSK83Y5neIdgJ62
+!s85 0
+!s108 1508899495.360000
+!s107 EX_computer1.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|EX_computer1.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0

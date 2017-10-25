@@ -2,7 +2,7 @@ module BCD(clk,
           hex,
           dec,
 			 IN_wr);
-input IN_wr;
+input [1:0] IN_wr;
 input  clk;
 
 inout  [15:0] hex;
@@ -24,10 +24,13 @@ assign hex = 16'hzzzz;
 assign rrhex = hex_in[15] ? ~hex_in[15:0]+1'b1 : hex_in[15:0];         //去符号
 assign dec = {/*rese,*/resd[3:0],resc[3:0],resb[3:0],resa[3:0]};
 
-always@(IN_wr,hex)
-begin
-	if(IN_wr)
-		hex_in = hex;
+always@(posedge clk)
+begin 
+	case(IN_wr)
+	2'b00,2'b11: hex_in = hex_in;
+	2'b01: hex_in[7:0] = hex[7:0];
+	2'b10: hex_in[15:8] = hex[15:8];
+	endcase
 end
 
 always@(posedge clk)                  //第一级寄存器

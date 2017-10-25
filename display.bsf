@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 272 128)
+	(rect 16 16 248 96)
 	(text "display" (rect 5 0 32 12)(font "Arial" ))
-	(text "inst" (rect 8 96 20 108)(font "Arial" ))
+	(text "inst" (rect 8 64 20 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -38,25 +38,18 @@ applicable agreement for further details.
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
-		(pt 0 64)
-		(input)
-		(text "IN_off_number[2..0]" (rect 0 0 83 12)(font "Arial" ))
-		(text "IN_off_number[2..0]" (rect 21 59 104 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 256 32)
+		(pt 232 32)
 		(output)
 		(text "OUT_choice[3..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "OUT_choice[3..0]" (rect 165 27 235 39)(font "Arial" ))
-		(line (pt 256 32)(pt 240 32)(line_width 3))
+		(text "OUT_choice[3..0]" (rect 141 27 211 39)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32)(line_width 3))
 	)
 	(port
-		(pt 256 48)
+		(pt 232 48)
 		(output)
 		(text "OUT_seg[7..0]" (rect 0 0 60 12)(font "Arial" ))
-		(text "OUT_seg[7..0]" (rect 175 43 235 55)(font "Arial" ))
-		(line (pt 256 48)(pt 240 48)(line_width 3))
+		(text "OUT_seg[7..0]" (rect 151 43 211 55)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48)(line_width 3))
 	)
 	(parameter
 		"S0"
@@ -164,7 +157,7 @@ applicable agreement for further details.
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(drawing
-		(rectangle (rect 16 16 240 96)(line_width 1))
+		(rectangle (rect 16 16 216 64)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 272 -64 372 16))
+	(annotation_block (parameter)(rect 248 -64 348 16))
 )

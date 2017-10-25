@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="EX_computer1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|test_computer|lpm_ram:inst4|altsyncram:RAMDATA_rtl_0" CBX_FILE_NAME="altsyncram_oog1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

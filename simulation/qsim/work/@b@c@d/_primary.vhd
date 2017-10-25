@@ -5,6 +5,6 @@ entity BCD is
         clk             : in     vl_logic;
         hex             : inout  vl_logic_vector(15 downto 0);
         dec             : out    vl_logic_vector(15 downto 0);
-        IN_wr           : in     vl_logic
+        IN_wr           : in     vl_logic_vector(1 downto 0)
     );
 end BCD;
